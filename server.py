@@ -32,7 +32,7 @@ from PIL import Image
 
 DEFAULT_TIFF_PATH = "/Users/michael_z/Downloads/PlantTools/snum_sand_silt_clay_drytime_1440_480_5.tif"
 PLANT_DATA_CSV = "/Users/michael_z/Downloads/PlantTools/Plant Database/numbers_soil_clean_processed.csv"
-OPENWEATHER_API_KEY = "8ab060ad06b4fa2accd41a4f8e646025"
+OPENWEATHER_API_KEY = ""
 YOLO_MODEL_PATH = "/Users/michael_z/Downloads/PlantTools/plant-growth-stage-classifier-yolov8x-best.pt"
 PLANTNET_RESULT_FILE = "/Users/michael_z/Downloads/PlantTools/plantnet_result.csv"
 YOLO_TRANSLATED_TEXT_FILE = "results_translated.txt"
@@ -47,7 +47,7 @@ WATERING_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/watering.csv"
 AREA_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/area.csv"
 SOIL_PH_TIFF_PATH = "/Users/michael_z/Downloads/PlantTools/phh2o_0-5cm_mean_1000.tif"
 PLANT_DATABASE_PATH = "/Users/michael_z/Downloads/PlantTools/Plant Database/numbers_soil_clean_updated_processed.csv"
-VISUAL_CROSSING_API_KEY = "LKQW55REM75N3L7KTEL9ZVR5Q"
+VISUAL_CROSSING_API_KEY = ""
 WATERING_PLAN_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/watering_plan.csv"
 
 # Global variables for area data, disease info and plant database.
@@ -1083,7 +1083,7 @@ def process_crop_recommendation(sensor, selected_plants=None, lang='en'):
 
 
 def run_plantnet_api(image_path):
-    API_KEY = "2b10FsF1IbmZ2DQ288f5rSzyO"  # Replace with your actual key
+    API_KEY = ""  # Replace with your actual key
     endpoint = f"https://my-api.plantnet.org/v2/identify/all?api-key={API_KEY}"
     try:
         with open(image_path, 'rb') as img:
