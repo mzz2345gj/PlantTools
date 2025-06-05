@@ -100,30 +100,6 @@ A comprehensive agriculture tool that provides intelligent recommendations for p
   - Input: Plant image
   - Output: Plant identification and health analysis
 
-## 📱 iOS App Features
-
-### User Interface
-- Clean, modern SwiftUI design
-- Customizable theme colors
-- Dark mode support
-- Responsive layouts
-- Smooth animations and transitions
-
-### Functionality
-- Real-time plant analysis
-- Location-based recommendations
-- Multi-language support
-- Offline capabilities
-- Camera integration for plant photos
-- Weather data integration
-
-### Settings
-- Language selection (English/Chinese)
-- Theme customization
-- Location permissions
-- Notification preferences
-- About section with app information
-
 ## 🔒 Security
 
 - API key management
