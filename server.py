@@ -32,7 +32,7 @@ from PIL import Image
 
 DEFAULT_TIFF_PATH = "/Users/michael_z/Downloads/PlantTools/snum_sand_silt_clay_drytime_1440_480_5.tif"
 PLANT_DATA_CSV = "/Users/michael_z/Downloads/PlantTools/Plant Database/numbers_soil_clean_processed.csv"
-OPENWEATHER_API_KEY = ""
+OPENWEATHER_API_KEY = "8ab060ad06b4fa2accd41a4f8e646025"
 YOLO_MODEL_PATH = "/Users/michael_z/Downloads/PlantTools/plant-growth-stage-classifier-yolov8x-best.pt"
 PLANTNET_RESULT_FILE = "/Users/michael_z/Downloads/PlantTools/plantnet_result.csv"
 YOLO_TRANSLATED_TEXT_FILE = "results_translated.txt"
@@ -47,7 +47,7 @@ WATERING_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/watering.csv"
 AREA_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/area.csv"
 SOIL_PH_TIFF_PATH = "/Users/michael_z/Downloads/PlantTools/phh2o_0-5cm_mean_1000.tif"
 PLANT_DATABASE_PATH = "/Users/michael_z/Downloads/PlantTools/Plant Database/numbers_soil_clean_updated_processed.csv"
-VISUAL_CROSSING_API_KEY = ""
+VISUAL_CROSSING_API_KEY = "LKQW55REM75N3L7KTEL9ZVR5Q"
 WATERING_PLAN_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/watering_plan.csv"
 
 # Global variables for area data, disease info and plant database.
@@ -1083,7 +1083,7 @@ def process_crop_recommendation(sensor, selected_plants=None, lang='en'):
 
 
 def run_plantnet_api(image_path):
-    API_KEY = ""  # Replace with your actual key
+    API_KEY = "2b10FsF1IbmZ2DQ288f5rSzyO"  # Replace with your actual key
     endpoint = f"https://my-api.plantnet.org/v2/identify/all?api-key={API_KEY}"
     try:
         with open(image_path, 'rb') as img:
@@ -1230,23 +1230,134 @@ def get_main_menu_html(lang_strings):
 <head>
     <title>{lang_strings['app_title']}</title>
     <style>
-        body {{ font-family: sans-serif; text-align: center; }}
-        .button-group button {{ margin: 5px; padding: 10px 20px; font-size: 1em; cursor: pointer; }}
-        .language-buttons button {{ margin-top: 20px; padding: 8px 15px; font-size: 0.9em; cursor: pointer; }}
+        body {{ 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+            color: #2c3e50;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }}
+        .container {{
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }}
+        .logo {{
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: #2e7d32;
+        }}
+        h1 {{ 
+            color: #2e7d32;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 600;
+        }}
+        p {{
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }}
+        .button-group {{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }}
+        .button-group button {{ 
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }}
+        .button-group button:hover {{ 
+            background-color: #388e3c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }}
+        .button-group button:active {{ 
+            transform: translateY(0);
+        }}
+        .divider {{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+            color: #666;
+        }}
+        .divider::before,
+        .divider::after {{
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e0e0e0;
+        }}
+        .divider::before {{
+            margin-right: 20px;
+        }}
+        .divider::after {{
+            margin-left: 20px;
+        }}
+        .language-buttons {{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }}
+        .language-buttons button {{ 
+            padding: 10px 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }}
+        .language-buttons button:hover {{ 
+            background-color: #4caf50;
+            color: white;
+        }}
     </style>
 </head>
 <body>
-    <h1>{lang_strings['welcome_message']}</h1>
-    <p>{lang_strings['select_function']}</p>
-    <form action="/set_function" method="post" class="button-group">
-        <button type="submit" name="function" value="watering">{lang_strings['btn_watering_recommendations']}</button><br><br>
-        <button type="submit" name="function" value="crop">{lang_strings['btn_crop_recommendations']}</button><br><br>
-        <button type="submit" name="function" value="plant">{lang_strings['btn_plant_analysis']}</button>
-    </form>
-    <hr>
-    <div class="language-buttons">
-        <a href="/set_language/en"><button>{lang_strings['btn_english']}</button></a>
-        <a href="/set_language/zh"><button>{lang_strings['btn_chinese']}</button></a>
+    <div class="container">
+        <div class="logo">🌱</div>
+        <h1>{lang_strings['welcome_message']}</h1>
+        <p>{lang_strings['select_function']}</p>
+        <form action="/set_function" method="post" class="button-group">
+            <button type="submit" name="function" value="watering">
+                <span style="font-size: 1.2em;">💧</span>
+                {lang_strings['btn_watering_recommendations']}
+            </button>
+            <button type="submit" name="function" value="crop">
+                <span style="font-size: 1.2em;">🌿</span>
+                {lang_strings['btn_crop_recommendations']}
+            </button>
+            <button type="submit" name="function" value="plant">
+                <span style="font-size: 1.2em;">🔍</span>
+                {lang_strings['btn_plant_analysis']}
+            </button>
+        </form>
+        <div class="divider">or</div>
+        <div class="language-buttons">
+            <a href="/set_language/en"><button>🇺🇸 {lang_strings['btn_english']}</button></a>
+            <a href="/set_language/zh"><button>🇨🇳 {lang_strings['btn_chinese']}</button></a>
+        </div>
     </div>
 </body>
 </html>
