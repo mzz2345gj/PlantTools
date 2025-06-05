@@ -43,18 +43,6 @@ A comprehensive agriculture tool that provides intelligent recommendations for p
   - `requests` for API calls
   - `gunicorn` for production deployment
 
-### iOS App
-- SwiftUI framework
-- Core Location for location services
-- UserNotifications for alerts
-- Key Features:
-  - Modern SwiftUI interface
-  - Dark mode support
-  - Multi-language support (English and Chinese)
-  - Location-based services
-  - Real-time plant analysis
-  - Customizable theme colors
-  - Offline capability for basic features
 
 ## 📋 Prerequisites
 
@@ -67,20 +55,10 @@ A comprehensive agriculture tool that provides intelligent recommendations for p
   - PlantNet API
   - Visual Crossing API
 
-### iOS App
-- Xcode 14.0 or later
-- iOS 15.6 or later
-- Swift 5.5 or later
-- CocoaPods (for dependency management)
-
 ## 🚀 Installation
 
 ### Backend Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mzz2345gj/PlantTools.git
-   cd PlantTools
-   ```
+1. Download the Repository from releases (don't clone the repo, it doesn't contain all the files), unzip, and navigate to the folder
 
 2. Create and activate a virtual environment:
    ```bash
@@ -104,23 +82,7 @@ A comprehensive agriculture tool that provides intelligent recommendations for p
    ```bash
    python server.py
    ```
-
-### iOS App Setup
-1. Clone the iOS app repository:
-   ```bash
-   git clone https://github.com/mzz2345gj/Gardener-iOS.git
-   cd Gardener-iOS
-   ```
-
-2. Install dependencies:
-   ```bash
-   pod install
-   ```
-
-3. Open `Gardener.xcworkspace` in Xcode
-4. Configure your development team and bundle identifier
-5. Build and run the application
-
+   
 ## 🌐 API Endpoints
 
 ### Watering Recommendations
@@ -194,4 +156,3 @@ For support, please open an issue in the GitHub repository or contact the mainta
 - OpenWeather API for weather data
 - Visual Crossing API for historical climate data
 - YOLO and ResNet-34 for image analysis
-- SwiftUI and Apple's development tools
