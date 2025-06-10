@@ -30,25 +30,25 @@ import torchvision.models as models
 from torchvision import transforms
 from PIL import Image
 
-DEFAULT_TIFF_PATH = "/Users/michael_z/Downloads/PlantTools/snum_sand_silt_clay_drytime_1440_480_5.tif"
-PLANT_DATA_CSV = "/Users/michael_z/Downloads/PlantTools/Plant Database/numbers_soil_clean_processed.csv"
+DEFAULT_TIFF_PATH = "snum_sand_silt_clay_drytime_1440_480_5.tif"
+PLANT_DATA_CSV = "Plant Database/numbers_soil_clean_processed.csv"
 OPENWEATHER_API_KEY = ""
-YOLO_MODEL_PATH = "/Users/michael_z/Downloads/PlantTools/plant-growth-stage-classifier-yolov8x-best.pt"
-PLANTNET_RESULT_FILE = "/Users/michael_z/Downloads/PlantTools/plantnet_result.csv"
+YOLO_MODEL_PATH = "plant-growth-stage-classifier-yolov8x-best.pt"
+PLANTNET_RESULT_FILE = "plantnet_result.csv"
 YOLO_TRANSLATED_TEXT_FILE = "results_translated.txt"
 YOLO_OUTPUT_TEXT_FILE = "output.txt"
 YOLO_PROB_TEXT_FILE = "prob.txt"
 YOLO_RESULT_TEXT_FILE = "results.txt"
-SOIL_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/soil.csv"
-TEMPERATURE_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/TEMP.csv"
-SOIL_WATER_CONTENT_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/SWC.csv"
-EVAPOTRANSPIRATION_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/ET0.csv"
-WATERING_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/watering.csv"
-AREA_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/area.csv"
-SOIL_PH_TIFF_PATH = "/Users/michael_z/Downloads/PlantTools/phh2o_0-5cm_mean_1000.tif"
-PLANT_DATABASE_PATH = "/Users/michael_z/Downloads/PlantTools/Plant Database/numbers_soil_clean_updated_processed.csv"
+SOIL_CSV_FILE = "soil.csv"
+TEMPERATURE_CSV_FILE = "TEMP.csv"
+SOIL_WATER_CONTENT_CSV_FILE = "SWC.csv"
+EVAPOTRANSPIRATION_CSV_FILE = "ET0.csv"
+WATERING_CSV_FILE = "watering.csv"
+AREA_CSV_FILE = "area.csv"
+SOIL_PH_TIFF_PATH = "phh2o_0-5cm_mean_1000.tif"
+PLANT_DATABASE_PATH = "Plant Database/numbers_soil_clean_updated_processed.csv"
 VISUAL_CROSSING_API_KEY = ""
-WATERING_PLAN_CSV_FILE = "/Users/michael_z/Downloads/PlantTools/watering_plan.csv"
+WATERING_PLAN_CSV_FILE = "watering_plan.csv"
 
 # Global variables for area data, disease info and plant database.
 area_data = {"pots": [], "yard": None}
