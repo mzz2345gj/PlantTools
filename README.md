@@ -1,6 +1,8 @@
 # PlantTools - Smart Agriculture Assistant
 
 A comprehensive agriculture tool that provides intelligent recommendations for plant care, watering schedules, and crop selection based on environmental conditions and soil analysis. Available as a web application and iOS companion app.
+<img width="1919" alt="Screenshot 2025-06-08 at 8 53 19 PM" src="https://github.com/user-attachments/assets/2b9c4e8a-3a32-4179-91f5-68e51281aac4" />
+
 
 ## 🌟 Features
 
